@@ -1,8 +1,8 @@
 #include <iostream>
 
-//void fun(int&&) {std::cout << "rvalue ref int&&\n";} //pasuje rvalue ref
-void fun(int&) {std::cout << "lvalue ref int&\n";} //pasuje lvalue
-void fun(const int&) {std::cout << "const ref const int&\n";} //pasuje const lvalue ref oraz lvalue
+void fun(int&&) {std::cout << "rvalue ref int&&\n";} 
+//void fun(int&) {std::cout << "lvalue ref int&\n";} 
+void fun(const int&) {std::cout << "const ref const int&\n";} 
 
 int main() {
 
