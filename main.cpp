@@ -1,8 +1,12 @@
 #include <iostream>
 
+//void fun(int&&) {std::cout << "rvalue ref int&&\n";} //pasuje rvalue ref
+void fun(int&) {std::cout << "lvalue ref int&\n";} //pasuje lvalue
+void fun(const int&) {std::cout << "const ref const int&\n";} //pasuje const lvalue ref oraz lvalue
+
 int main() {
 
-    int i = 16; //rvalue
+    int p = 16; //rvalue
     bool b = false; //rvalue
     std::cout << "adres str: " << &"hello there" << '\n'; //lvalue
 
@@ -29,5 +33,11 @@ int main() {
     std::string &&rv_ref_s6 = "dfgdgsdgs"; //mozna przypisac obiekt tymczasowy
     rv_ref_s6 += "fgdrgdfg"; //mozna modyfikowac
 
+
+    int i = 10;
+    const int &x = 10;
+    fun(i);
+    fun(x);
+    fun(546);
 
 }
