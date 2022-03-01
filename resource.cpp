@@ -21,11 +21,15 @@ int main() {
 
     std::cout << "====\n";
     Resource r1{};
+    //ctor
     std::cout << "====\n";
     Resource r2 = r1;
+    //ctor kopujacy
     std::cout << "====\n";
     Resource r3 = fun();
+    //tworzymy Res w funkcji, przy returnie jest kopiowany
+    //i zwracany i odpala sie copy ctor
     std::cout << "====\n";
-    r1 = fun();
+    r1 = fun(); //tworzony w fcji, assign op
     std::cout << "====\n";
 }
