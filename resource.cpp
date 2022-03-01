@@ -14,6 +14,7 @@ struct Resource {
 
 Resource fun() {
     Resource r;
+    std::cout << "inside fun()\n";
     return r; //zwraca przez wartosc
 }
 
