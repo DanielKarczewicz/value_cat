@@ -19,8 +19,13 @@ Resource fun() {
 
 int main() {
 
+    std::cout << "====\n";
     Resource r1{};
+    std::cout << "====\n";
     Resource r2 = r1;
+    std::cout << "====\n";
     Resource r3 = fun();
+    std::cout << "====\n";
     r1 = fun();
+    std::cout << "====\n";
 }
