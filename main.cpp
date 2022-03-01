@@ -1,8 +1,5 @@
 #include <iostream>
 
-void fun(int&&) {std::cout << "rvalue ref int&&\n";} 
-//void fun(int&) {std::cout << "lvalue ref int&\n";} 
-void fun(const int&) {std::cout << "const ref const int&\n";} 
 
 int main() {
 
@@ -33,11 +30,5 @@ int main() {
     std::string &&rv_ref_s6 = "dfgdgsdgs"; //mozna przypisac obiekt tymczasowy
     rv_ref_s6 += "fgdrgdfg"; //mozna modyfikowac
 
-
-    int i = 10;
-    const int &x = 10;
-    fun(i);
-    fun(x);
-    fun(546);
 
 }
