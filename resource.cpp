@@ -10,6 +10,9 @@ struct Resource {
     Resource(const Resource&) {std::cout << "copy ctor - i'm ex to copy\n";}
     Resource& operator=(const Resource&) {std::cout << "copy op - i'm ex to copy\n";}
 
+    Resource(Resource&&) {std::cout << "move ctor\n";}
+    Resource&& operator=(const Resource&&) {std::cout << "move op\n";}
+
 };
 
 Resource fun() {
