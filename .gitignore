@@ -1,6 +1,7 @@
 # Prerequisites
 main
 fun
+move
 *.d
 
 # Compiled Object files
