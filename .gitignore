@@ -1,5 +1,6 @@
 # Prerequisites
 main
+fun
 *.d
 
 # Compiled Object files
