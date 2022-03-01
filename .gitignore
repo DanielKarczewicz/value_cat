@@ -1,7 +1,4 @@
 # Prerequisites
-main
-fun
-move
 *.d
 
 # Compiled Object files
@@ -34,3 +31,6 @@ move
 *.out
 *.app
 res
+main
+fun
+move
