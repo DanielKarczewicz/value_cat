@@ -23,6 +23,8 @@ Resource fun() {
 
 int main() {
 
+
+    //te komentarze sa dla klasy Resource bez move ctor i op
     std::cout << "====\n";
     Resource r1{};
     //ctor
@@ -36,4 +38,8 @@ int main() {
     std::cout << "====\n";
     r1 = fun(); //tworzony w fcji, assign op
     std::cout << "====\n";
+
+    //zamiast kopiowania jest przenoszony
+    Resource r4 = std::move(r2);
+    //jak wychodzimy z fun to zamiast copy robimy move
 }
