@@ -8,7 +8,7 @@ std::vector<int> addOne(std::vector<int> vec) {
 
 void addOneOpt(std::vector<int>& vec) {
     vec.push_back(1);
-} //przekazujemy przez adres
+} //przekazujemy przez adres poniewaz kopiowanie jest drogie
 
 int addOne(int intCheapToCopy) {
     intCheapToCopy += 1;
