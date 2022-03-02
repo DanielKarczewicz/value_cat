@@ -11,41 +11,39 @@ struct Probe {
 };
 
 //kopia
-/*void fun(Probe p) {
+void fun(Probe p) {
     std::vector<Probe> v{};
     std::cout << "wewnatrz funkcji Probe p\n";
-    v.push_back(std::move(p));
-}*/
-
-
-
-
+    v.push_back(std::move(p)); 
+    std::cout << "koniec funkcji Probe p\n";
+}
+/*
 //lub
-void fun(Probe &&p) {//rvalue
+void fun(Probe &&p) {//lvalue wskazujace na rvalue
     
     std::vector<Probe> v{};
     std::cout << "wewnatrz funkcji Probe &&p\n";
     v.push_back(std::move(p)); //move ctor
+    std::cout << "koniec funkcji Probe &&p\n";
 }
 
-
-
-
-
 //i
-void fun(Probe &p) {
+void fun(Probe &p) { //lvalue
     std::vector<Probe> v{};
     std::cout << "wewnatrz funkcji Probe &p\n";
 
     //tu jest kopiowanie obiektu
-    v.push_back(p);
+    v.push_back(p); //kopiowanie
+    std::cout << "koniec funkcji Probe &p\n";
 }
-
-
+*/
 
 int main() {
 
     Probe p{}; //def ctor
+    std::cout << "====\n";
     fun(p); //przekazuje jako lvalue
+    std::cout << "====\n";
     fun(std::move(p)); //przekazuje jako rvalue tj. rzutowanie na xvalue
+    //kopiowanie 
 }
