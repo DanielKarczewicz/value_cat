@@ -10,27 +10,42 @@ struct Probe {
     Probe& operator=(Probe&&) {std::cout << "move assignment\n";}
 };
 
+//kopia
 /*void fun(Probe p) {
     std::vector<Probe> v{};
     std::cout << "wewnatrz funkcji Probe p\n";
     v.push_back(std::move(p));
 }*/
+
+
+
+
 //lub
-void fun(Probe &&p) {
+void fun(Probe &&p) {//rvalue
+    
     std::vector<Probe> v{};
     std::cout << "wewnatrz funkcji Probe &&p\n";
-    v.push_back(std::move(p));
+    v.push_back(std::move(p)); //move ctor
 }
+
+
+
+
+
 //i
 void fun(Probe &p) {
     std::vector<Probe> v{};
     std::cout << "wewnatrz funkcji Probe &p\n";
+
+    //tu jest kopiowanie obiektu
     v.push_back(p);
 }
 
+
+
 int main() {
 
-
-
-
+    Probe p{}; //def ctor
+    fun(p); //przekazuje jako lvalue
+    fun(std::move(p)); //przekazuje jako rvalue tj. rzutowanie na xvalue
 }
