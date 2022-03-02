@@ -24,6 +24,8 @@ Resource fun() {
 int main() {
 
 
+    //-fno-elide-constructors
+
     //te komentarze sa dla klasy Resource bez move ctor i op
     std::cout << "====\n";
     Resource r1{};
