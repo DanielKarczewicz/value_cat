@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 
 struct Probe {
 
@@ -9,8 +10,26 @@ struct Probe {
     Probe& operator=(Probe&&) {std::cout << "move assignment\n";}
 };
 
+/*void fun(Probe p) {
+    std::vector<Probe> v{};
+    std::cout << "wewnatrz funkcji Probe p\n";
+    v.push_back(std::move(p));
+}*/
+//lub
+void fun(Probe &&p) {
+    std::vector<Probe> v{};
+    std::cout << "wewnatrz funkcji Probe &&p\n";
+    v.push_back(std::move(p));
+}
+//i
+void fun(Probe &p) {
+    std::vector<Probe> v{};
+    std::cout << "wewnatrz funkcji Probe &p\n";
+    v.push_back(p);
+}
+
 int main() {
-    
+
 
 
 
